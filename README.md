@@ -1,7 +1,7 @@
 # Scylla
 A collection of PowerShell scripts falling into six categories made easily accessible by its core script.
 
-Disclaimer: This is in an extremely early stage in development; the author shall hold no responsibility for damages or unwanted changes to machines due to the usage of any scripts in this repository. All required PowerShell/.NET versions will be documented on a per-script basis (typically 5.1 and 4.8 respectively); no scripts guaranteed to be compatible with depricated versions unless stated otherwise besides Scylla's core (down to 3.0 and 4.5.2).
+Disclaimer: This is in an extremely early stage in development; the author shall hold no responsibility for damages or unwanted changes to machines due to the usage of any scripts in this repository. All required PowerShell/.NET versions will be documented on a per-script basis (typically 5.1 and 4.8 respectively); no scripts guaranteed to be compatible with depricated versions unless stated otherwise.
 
 ## 1. System Configuration
 This section will focus on scripts to customize Windows to the user's preference. May work to include modifying terminal behavior and look, startup programs, DNS setup, VPN setups, network discovery, telemetry, and other preconfigurations.
