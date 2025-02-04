@@ -1,4 +1,23 @@
-Write-Warning "`nThis will set up a notice of the terms of use of using this resource at logon."
+﻿#Requires -Version 5.1 -RunAsAdministrator
+<#
+.SYNOPSIS
+Requires PS 5.1 and Administrator rights.
+
+.NOTES
+Author: Logan Jackson
+Date: 2024
+
+.LINK
+Website: https://lj-sec.github.io/
+#>
+
+if(MyInvocation.PSCommandPath -notlike "*scylla_core.ps1")
+{
+    Write-Error "Script not launched from core Scylla script."
+    Exit 1
+}
+
+Write-Warning "This will set up a notice of the terms of use of using this resource at logon."
 $warning = Read-Host "Are you sure you want to continue? (y/N)"
 if ($warning -inotlike "y*")
 {
@@ -63,3 +82,4 @@ switch($termsChoice)
         Write-Host "Invalid selection"
     }
 }
+Exit 0

@@ -1,0 +1,4 @@
+﻿.vscode/*
+!.vscode/settings.json.default
+
+.history/

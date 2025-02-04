@@ -1,3 +1,22 @@
+﻿#Requires -Version 5.1 -RunAsAdministrator
+<#
+.SYNOPSIS
+Requires PS 5.1 and Administrator rights.
+
+.NOTES
+Author: Logan Jackson
+Date: 2024
+
+.LINK
+Website: https://lj-sec.github.io/
+#>
+
+if($MyInvocation.PSCommandPath -notlike "*scylla_core.ps1")
+{
+    Write-Error "Script not launched from core Scylla script."
+    Exit 1
+}
+
 $inventoryDir = "$env:HOMEDRIVE\Scylla\Inventory"
 mkdir -ErrorAction SilentlyContinue $inventoryDir | Out-Null
 
@@ -93,4 +112,5 @@ Invoke-Command -ScriptBlock {
 } | Out-File $inventoryFile -Encoding UTF8
 
 Write-Host "Sucess, inventory saved in $inventoryFile"
-Write-Log "Sucess, inventory saved in $inventoryFile" 
+Write-Log "Sucess, inventory saved in $inventoryFile"
+Exit 0
