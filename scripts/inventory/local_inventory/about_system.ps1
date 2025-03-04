@@ -1,4 +1,4 @@
-﻿#Requires -Version 5.1 -RunAsAdministrator
+#Requires -Version 5.1 -RunAsAdministrator
 <#
 .SYNOPSIS
 Requires PS 5.1 and Administrator rights.
